@@ -1,9 +1,15 @@
 class Car(object):
 
-    def __init__(self):
-        return None
+    def __init__(self, int driver_number):
+        self.driver_number = driver_number
+    def set_driver_number(int num):
+        self.driver_number = num
+
+     
     def choose_direction(self):
         return None
+
+    
     def exit_city(self, location):
         if(location == "Karamu Road"):
             message = "the driver has gone to Napier"
@@ -27,6 +33,8 @@ class Car(object):
 
 
         return " \n -----"
+
+
 
 
 ##random.seed(a=None)
