@@ -16,6 +16,9 @@ class Car(object):
         random.seed(the_seed)
         num = random.randint(0, 1)
         return num
+    def heading_declaration_message(self, location, direction, roads):
+        """Driver 3 heading from Mayfair to Stortford lodge via [option street 3]."""
+        roads[location]
 
     def exit_city(self, location=None):
         """doc"""
@@ -44,6 +47,8 @@ class Car(object):
             return None
         return " \n -----"
 
+
+##test stuff
 c = Car(1)
 n = []
 for i in range(30, 41):
@@ -76,4 +81,7 @@ thing = [[[0], [0], [0]],
 
 for i in range(1, 5):
     c = Car(i)
+    c.choose_direction()
+    
+    
     
