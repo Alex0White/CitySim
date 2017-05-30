@@ -14,8 +14,30 @@ class Car(object):
     def choose_direction(self, the_seed):  # seed must be a int
         """psudo randomly chooses between 1 and 2"""
         random.seed(the_seed)
-        num = random.randint(0, 1)
+        num = random.random()
+        if num > 0.5:
+            num = 1
+        else:
+            num = 0
         return num
+
+    def choose_to_leave_city(self, the_seed):
+        random.seed(the_seed)
+        num = random.random()
+        if num > 0.8:
+            num = 1
+        else:
+            num = 0
+        return num
+
+    def new_seed(self, the_seed):
+        random.seed(the_seed)
+        num = random.random()
+        new_seed = int(num * 100)
+        print(new_seed)
+        return new_seed
+
+
     def heading_declaration_message(self, location, direction, roads):
         """Driver 3 heading from Mayfair to Stortford lodge via [option street 3]."""
         roads[location]
@@ -49,11 +71,14 @@ class Car(object):
 
 
 ##test stuff
+seed = int(input("Enter an integer: "))
 c = Car(1)
+
 n = []
-for i in range(30, 41):
-    print(i)
-    n.append(c.choose_direction(i))
+while(exit == 0):
+
+    n.append(c.choose_direction(seed))
+    seed = c.new_seed(seed)
 print(n)
 
 
@@ -71,17 +96,17 @@ exits = [ "Heratanga St / Havelock Rd", "Karamu Rd", "Omahu Rd", "Railway Rd"]
 
 roads = [["Riverslea Rd", "Murdoch Rd"], ["Grove Rd", "Windsor Ave"], ["Pakowhai Rd", "Fredrick St"], ["Wall Rd => Southland Rd => Murdoch Rd" "Maraekakaho Rd"]]
 
-thing = [[[0], [0]],
+thing1 = [[[0], [0]],
          [[0], [0]]]
 
-thing = [[[0], [0], [0]],
+thing2 = [[[0], [0], [0]],
          [[0], [0], [0]],
          [[0], [0], [0]]]
 
 
-for i in range(1, 5):
-    c = Car(i)
-    c.choose_direction()
+##for i in range(1, 5):
+  ##  c = Car(i)
+    ##c.choose_direction()
     
     
     
