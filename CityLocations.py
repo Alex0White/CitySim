@@ -37,10 +37,28 @@ class Car(object):
         print(new_seed)
         return new_seed
 
+    def circular_list(self, array, index, direction):
+        """1 means up the list 0 means down """
+        if direction == 1 and index == (len(array) - 1):
+            new_index = 0
+        elif direction == 0 and index == 0:
+            new_index = len(array - 1)
+        elif direction == 1:
+            new_index = (index + 1)
+        else:
+            new_index = index - 1
+        return array[index], new_index, array[new_index]
 
-    def heading_declaration_message(self, location, direction, roads):
+    def driver_heading(self, location, direction, roads, driver_number ):
         """Driver 3 heading from Mayfair to Stortford lodge via [option street 3]."""
+
+        driver_number
         roads[location]
+        next_location = location
+        return "Driver " + str(driver_number) + " heading from "+ location +" to "+ \
+               next_location +" lodge via "+ roads +"."
+
+
 
     def exit_city(self, location=None):
         """doc"""
@@ -75,6 +93,7 @@ seed = int(input("Enter an integer: "))
 c = Car(1)
 
 n = []
+
 while(exit == 0):
 
     n.append(c.choose_direction(seed))
@@ -83,6 +102,7 @@ print(n)
 
 
 four_locations = ["Akina", "Mayfair", "Mahora", "Storford Lodge"]
+print(c.circular_list(four_locations, 3, 1))
 
 exits = [ "Heratanga St / Havelock Rd", "Karamu Rd", "Omahu Rd", "Railway Rd"] 
             #Right          #left
