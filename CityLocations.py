@@ -21,7 +21,7 @@ class RNG(object):
 
 
     def new_seed(self, the_seed):
-        random.seed(the_seed)
+        random.seed(the_seed + 1)
         num = random.random()
         new_seed = int(num * 100)
 
