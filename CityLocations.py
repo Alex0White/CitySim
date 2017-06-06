@@ -18,28 +18,24 @@ class RNG(object):
     def set_seed(self, a_seed):
         self.seed = a_seed
 
-
-
     def new_seed(self, the_seed):
         random.seed(the_seed + 1)
         num = random.random()
         new_seed = int(num * 100)
-
         return new_seed
-
-
-
 
 class Car(object):
     """this is a Car"""
     def __init__(self, driver_number):
         self.driver_number = driver_number
-        self.location = random.randint(0, 3)
+        self.location = 1
         self.next_location = 0
+        self.meet_with_john_num = 0
 
 
 
-
+    def meet_with_john_num_plusone(self):
+        self.meet_with_john_num += 1
 
     def set_driver_number(self, num):
         """sets the driver number 1 through to 5 according to the requirements"""
@@ -62,8 +58,6 @@ class Car(object):
     def get_next_location(self):
         return self.next_location
 
-
-
     def choose_direction(self, the_seed):  # seed must be a int
         """psudo randomly chooses between 1 and 2"""
 
@@ -78,15 +72,12 @@ class Car(object):
         the_road = two_roads[direction]
         return the_road
 
-
     def choose_to_leave_city(self, the_seed):
-
 
         if the_seed > 49:
             return False
         else:
             return True
-
 
     def new_seed(self, the_seed):
         random.seed(the_seed)
@@ -107,41 +98,57 @@ class Car(object):
             new_index = index - 1
         return new_index
 
+    def exit_circular_list(self, array, index, direction):
+        """1 means up the list 0 means down """
+
+        if direction == 1 and index == 0:
+            new_index = len(array) - 1
+        elif direction == 1:
+            new_index = (index - 1)
+        else:
+            new_index = index
+        return new_index
+
     def driver_heading(self, driver_number, location, next_location, roads):
         """Driver 3 heading from Mayfair to Stortford lodge via [option street 3]."""
-
-
-
         return "Driver " + str(driver_number) + " heading from "+ location +" to "+ next_location +" via "+ roads +"."
 
-
+    def exit_city_street(self, location, street):
+        return "Driver " + str(self.driver_number) + " heading from " + location + " to Outside City via " + street + "."
 
     def exit_city(self, location=None):
         """doc"""
-        if location == 1 or 2:
-            message = "the driver has gone to Napier"
-        elif location == 2 or 3:
-            message = "the driver has gone to Flaxmere."
+        if location == "Karamu Rd":
+            message = "Driver " + str(self.driver_number) + " has gone to Napier"
+        elif location == "Omahu Rd":
+            message = message = "Driver " + str(self.driver_number) + " has gone to Flaxmere"
         else:
-            message = None
+            message = ''
         return message
 
-    def met_john_message(self, met_with_john_number, driver_number):
+    def met_john_message(self):
         """doc"""
-        if met_with_john_number == 0:
-            message = "Driver " + str(driver_number) + \
-                "met with John Jamieson 0 time."
-        if met_with_john_number > 0:
+        if self.meet_with_john_num == 0:
+            message = "Driver " + str(self.driver_number) + \
+                " met with John Jamieson 0 time."
+            return message
+        if self.meet_with_john_num == 1:
             message = "Driver " + \
-                str(driver_number) + "met with John Jamieson " + \
-                str(met_with_john_number) + " times."
+                str(self.driver_number) + " met with John Jamieson " + \
+                str(self.meet_with_john_num) + " time."
+            return message
+        if self.meet_with_john_num > 1:
+            message = "Driver " + \
+                str(self.driver_number) + " met with John Jamieson " + \
+                str(self.meet_with_john_num) + " times."
+            return message
         return None
 
-    def car_final_messages(self, met_with_john, driver_number):
+    def car_final_messages(self):
         """doc"""
-        if met_with_john == 0:
-            return None
-        return " \n -----"
+        if self.meet_with_john_num == 0:
+            return "That passenger missed out!" + "\n-----"
+        return "-----"
 
 def main():
     seed = RNG(int(input("Enter an integer: ")))
@@ -149,7 +156,7 @@ def main():
         c = Car(i)
         four_locations = ["Akina", "Mayfair", "Mahora", "Storford Lodge"]
         roads = [["Murdoch Rd", "Riverslea Rd" ], ["Windsor Ave", "Grove Rd"], ["Fredrick St", "Pakowhai Rd"], ["Maraekakaho Rd", "Wall Rd => Southland Rd => Murdoch Rd"]]
-
+        exits = ["Heratanga St / Havelock Rd", "Karamu Rd", "Omahu Rd", "Railway Rd"]
         stay = True
         while stay:
             direction = c.choose_direction(seed.get_seed())
@@ -157,20 +164,27 @@ def main():
             road = c.road_picker(roads, c.get_location(), direction)
 
             first = four_locations[c.get_location()]
-            print(first)
+            #print(first)
 
             second = four_locations[c.get_next_location()]
-            print(second)
+            #print(second)
             print(c.driver_heading(c.get_driver_number(), first, second, road))
-
+            if c.location == 0:
+                c.meet_with_john_num_plusone()
             seed.set_seed(seed.new_seed(seed.get_seed()))
             stay = c.choose_to_leave_city(seed.get_seed())
-            seed.set_seed(seed.new_seed(seed.get_seed()))
+            ##seed.set_seed(seed.new_seed(seed.get_seed()))
 
 
             c.set_location(c.get_next_location())
-
-        print("exit city " + str(c.get_driver_number()))
+        exit_direction = c.choose_direction(seed.get_seed())
+        exit_street = exits[c.exit_circular_list(exits, c.get_location(), exit_direction)]
+        current_location = four_locations[c.get_location()]
+        print(c.exit_city_street(current_location, exit_street))
+        if c.exit_city(exit_street) != None:
+            print(c.exit_city(exit_street))
+        print(c.met_john_message())
+        print(c.car_final_messages())
 
 if __name__ == '__main__':
     main()
