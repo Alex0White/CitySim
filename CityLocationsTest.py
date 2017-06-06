@@ -1,10 +1,12 @@
 import unittest
 from CityLocations import Car
 
-class CarTest(unittest.TestCase):
+class TestCar(unittest.TestCase):
     def test_meet_with_john_num_plusone(self):
         c = Car(1)
-        self.assertEqual(c.meet_with_john_num, )
+        n = c.meet_with_john_num
+        c.meet_with_john_num_plusone()
+        self.assertEqual(c.meet_with_john_num, n)
 
     def test_exit_city_Karamu_Road(self):
         c = Car(1)

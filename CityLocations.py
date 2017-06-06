@@ -162,25 +162,18 @@ def main():
             exits = ["Heratanga St / Havelock Rd", "Karamu Rd", "Omahu Rd", "Railway Rd"]
             stay = True
 
-
-
             while stay:
                 direction = c.choose_direction(seed.get_seed())
                 c.set_next_location(c.circular_list(four_locations, c.get_location(), direction ))
                 road = c.road_picker(roads, c.get_location(), direction)
-
                 first = four_locations[c.get_location()]
                 #print(first)
-
                 second = four_locations[c.get_next_location()]
                 #print(second)
                 print(c.driver_heading(c.get_driver_number(), first, second, road), file=f)
-
                 seed.set_seed(seed.new_seed(seed.get_seed()))
                 stay = c.choose_to_leave_city(seed.get_seed())
                 ##seed.set_seed(seed.new_seed(seed.get_seed()))
-
-
                 c.set_location(c.get_next_location())
                 if c.location == 0:
                     c.meet_with_john_num_plusone()
