@@ -1,0 +1,36 @@
+Driver 1 heading from Mayfair to Akina via Windsor Ave.
+Driver 1 heading from Akina to Outside City via Railway Rd.
+Driver 1 met with John Jamieson 1 time.
+-----
+Driver 2 heading from Mayfair to Mahora via Grove Rd.
+Driver 2 heading from Mahora to Mayfair via Fredrick St.
+Driver 2 heading from Mayfair to Akina via Windsor Ave.
+Driver 2 heading from Akina to Storford Lodge via Murdoch Rd.
+Driver 2 heading from Storford Lodge to Mahora via Maraekakaho Rd.
+Driver 2 heading from Mahora to Storford Lodge via Pakowhai Rd.
+Driver 2 heading from Storford Lodge to Akina via Wall Rd => Southland Rd => Murdoch Rd.
+Driver 2 heading from Akina to Storford Lodge via Murdoch Rd.
+Driver 2 heading from Storford Lodge to Outside City via Omahu Rd.
+Driver 2 has gone to Flaxmere
+Driver 2 met with John Jamieson 2 times.
+-----
+Driver 3 heading from Mayfair to Mahora via Grove Rd.
+Driver 3 heading from Mahora to Outside City via Karamu Rd.
+Driver 3 has gone to Napier
+Driver 3 met with John Jamieson 0 time.
+That passenger missed out!
+-----
+Driver 4 heading from Mayfair to Mahora via Grove Rd.
+Driver 4 heading from Mahora to Mayfair via Fredrick St.
+Driver 4 heading from Mayfair to Akina via Windsor Ave.
+Driver 4 heading from Akina to Storford Lodge via Murdoch Rd.
+Driver 4 heading from Storford Lodge to Outside City via Omahu Rd.
+Driver 4 has gone to Flaxmere
+Driver 4 met with John Jamieson 1 time.
+-----
+Driver 5 heading from Mayfair to Mahora via Grove Rd.
+Driver 5 heading from Mahora to Mayfair via Fredrick St.
+Driver 5 heading from Mayfair to Akina via Windsor Ave.
+Driver 5 heading from Akina to Outside City via Railway Rd.
+Driver 5 met with John Jamieson 1 time.
+-----
