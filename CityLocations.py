@@ -71,13 +71,6 @@ class Car(object):
         else:
             return True
 
-    def new_seed(self, the_seed):
-        random.seed(the_seed)
-        num = random.random()
-        new_seed = int(num * 100)
-        print(new_seed)
-        return new_seed
-
     def circular_list(self, array, index, direction):
         """1 means up the list 0 means down """
         if direction == 1 and index == (len(array) - 1):
@@ -110,11 +103,11 @@ class Car(object):
         return "Driver " + str(self.driver_number) + " heading from " +\
                location + " to Outside City via " + street + "."
 
-    def exit_city(self, location=None):
+    def exit_city(self, exit_road=None):
         """doc"""
-        if location == "Karamu Rd":
+        if exit_road == "Karamu Rd":
             message = "Driver " + str(self.driver_number) + " has gone to Napier"
-        elif location == "Omahu Rd":
+        elif exit_road == "Omahu Rd":
             message = message = "Driver " + str(self.driver_number) + " has gone to Flaxmere"
         else:
             message = None
@@ -191,53 +184,9 @@ if __name__ == '__main__':
     main()
 
 
-##test stuff
-
-##seed = int(input("Enter an integer: "))
-##c = Car(1)
-
-##n = []
-
-# while(exit == 0):
-#
-#     n.append(c.choose_direction(seed))
-#     seed = c.new_seed(seed)
-# print(n)
-#
-#
-# four_locations = ["Akina", "Mayfair", "Mahora", "Storford Lodge"]
 
 
-##print(c.circular_list(four_locations, 3, 1))
-
-##print(c.circular_list(four_locations, 0, 0))
-##print(c.circular_list(four_locations, 1, 0))
-##print(c.circular_list(four_locations, 4, 1))
 
 
-exits = [ "Heratanga St / Havelock Rd", "Karamu Rd", "Omahu Rd", "Railway Rd"] 
-            #Right          #left
-"Akina" "Riverslea Rd" "Murdoch Rd" 
-            #Right          #left
-"Mahora" "Pakowhai Rd" "Fredrick St"
-            #Right          #left
-"Mayfair" "Grove Rd" "Windsor Ave"
-            #Right                                          #left
-"Stortford Lodge" "Wall Rd => Southland Rd => Murdoch Rd" "Maraekakaho Rd"
-
-roads = [["Riverslea Rd", "Murdoch Rd"], ["Grove Rd", "Windsor Ave"], ["Pakowhai Rd", "Fredrick St"], ["Wall Rd => Southland Rd => Murdoch Rd" "Maraekakaho Rd"]]
-
-thing1 = [[[0], [0]],
-         [[0], [0]]]
-
-thing2 = [[[0], [0], [0]],
-         [[0], [0], [0]],
-         [[0], [0], [0]]]
-
-
-##for i in range(1, 5):
-  ##  c = Car(i)
-    ##c.choose_direction()
-    
     
     

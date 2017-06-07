@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f6357a7-bc66-47dc-93da-c3dd29e3b186" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_car.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CityLocations.py" afterPath="$PROJECT_DIR$/CityLocations.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CityLocationsTest.py" afterPath="$PROJECT_DIR$/CityLocationsTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_car.py" afterPath="$PROJECT_DIR$/test_car.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,18 +22,8 @@
           <file leaf-file-name="CityLocations.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CityLocations.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="178" column="20" lean-forward="false" selection-start-line="178" selection-start-column="20" selection-end-line="178" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test_car.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test_car.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+                <state relative-caret-position="379">
+                  <caret line="189" column="0" lean-forward="true" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -43,9 +33,10 @@
             <entry file="file://$PROJECT_DIR$/CityLocationsTest.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="68">
-                  <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+                  <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
+                    <marker date="1496784471361" expanded="true" signature="80:473" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -55,14 +46,24 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="CityLocationsTest.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="test_car.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test_car.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1445">
+                  <caret line="85" column="35" lean-forward="false" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+                  <folding>
+                    <element signature="e#0#29#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CityLocationsTest.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CityLocationsTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="17">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="29" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -83,8 +84,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_car.py" />
         <option value="$PROJECT_DIR$/CityLocationsTest.py" />
+        <option value="$PROJECT_DIR$/test_car.py" />
         <option value="$PROJECT_DIR$/CityLocations.py" />
       </list>
     </option>
@@ -144,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in test_car.py">
+  <component name="RunManager" selected="Python.CityLocations">
     <configuration default="false" name="CityLocationsTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,9 +284,9 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test_car.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python.CityLocationsTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.CityLocations" />
+        <item index="0" class="java.lang.String" itemvalue="Python.CityLocations" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_car.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python.CityLocationsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -306,10 +307,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 00h 15m 35s.xml">
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 02m 20s.xml">
       <configuration name="Unittests in test_car.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 00h 16m 28s.xml">
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 03m 57s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 04m 36s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 06m 22s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 44m 39s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 47m 40s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 52m 23s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 54m 25s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 11h 55m 16s.xml">
+      <configuration name="Unittests in test_car.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_car_py - 2017.06.07 at 12h 03m 18s.xml">
       <configuration name="Unittests in test_car.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -373,6 +398,7 @@
           <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1496784471361" expanded="true" signature="80:473" ph="..." />
           </folding>
         </state>
       </provider>
@@ -405,25 +431,28 @@
     <entry file="file://$PROJECT_DIR$/CityLocationsTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1496784471361" expanded="true" signature="80:473" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_car.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="1445">
+          <caret line="85" column="35" lean-forward="false" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CityLocations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="178" column="20" lean-forward="false" selection-start-line="178" selection-start-column="20" selection-end-line="178" selection-end-column="20" />
+        <state relative-caret-position="379">
+          <caret line="189" column="0" lean-forward="true" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
           <folding />
         </state>
       </provider>
