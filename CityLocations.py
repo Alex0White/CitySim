@@ -18,6 +18,18 @@ class RNG(object):
         new_seed = int(num * 100)
         return new_seed
 
+    def zero_to_three(self, a_seed):
+        if a_seed > 75:
+            return 0
+        if a_seed > 50 and a_seed < 75:
+            return 1
+        if a_seed > 25 and a_seed < 50:
+            return 2
+        else:
+            return 3
+
+
+
 class Car(object):
     """this is a Car"""
     def __init__(self, driver_number):
@@ -149,6 +161,7 @@ def main():
 
         for i in range(1, 6):
             c = Car(i)
+            c.set_location(seed.zero_to_three(seed.get_seed()))
             four_locations = ["Akina", "Mayfair", "Mahora", "Storford Lodge"]
             roads = [["Murdoch Rd", "Riverslea Rd" ], ["Windsor Ave", "Grove Rd"], \
                      ["Fredrick St", "Pakowhai Rd"], ["Maraekakaho Rd", "Wall Rd => Southland Rd => Murdoch Rd"]]
